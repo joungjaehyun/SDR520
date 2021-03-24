@@ -34,7 +34,7 @@ class Rotator():
         while not rospy.is_shutdown():
             
             #self.twist.angular.z = 0.1
-            self.twist.linear.x = 0.0005
+            self.twist.linear.x = 0.005
             self._cmd_pub.publish(self.twist)
             rospy.loginfo('Rotating robot: %s', self.twist)
             r.sleep()
